@@ -1,0 +1,75 @@
+RUNNR   2                              number of run
+EVTNR   1                              number of first shower event
+NSHOW   50                             number of showers to generate
+*
+* [ Random number generator: 4 sequences used in IACT mode ]
+*
+SEED    58485   430   0                seed for 1st random number sequence
+SEED    63432   435   0                seed for 2nd random number sequence
+SEED    20103   481   0                seed for 3rd random number sequence
+SEED    59475   490   0                seed for 4th random number sequence
+*
+* [ Primary particle options ]
+*
+PRMPAR  1                              particle type of prim. particle
+ESLOPE  -2.0                           slope of primary energy spectrum
+ERANGE  1E3 1E3                        energy range of primary particle (in GeV)
+THETAP  0.   0.                        range of zenith angle (degree)
+PHIP    180. 180.                      range of azimuth angle (degree):
+*                                         from South if PHIP=ARRANG
+*VIEWCONE 0. 0.                         can be a cone around fixed THETAP/PHIP
+*
+* [ Site specific options ]
+*
+OBSLEV  2200.E2                        observation level (in cm)
+*ATMOSPHERE 10 N                        table of atmospheric profile
+*                                         (10 N: Windhoek average, no refr.)
+* ATMOSPHERE 1 N                       table of atmospheric profile
+*                                         (1 N: tropical, no refr.)
+MAGNET  12.5  -25.9                    magnetic field Gamsberg [H, Z] (muT)
+*ARRANG  -14.                           rotation of array to north [D] (degree)
+*
+* [Cherenkov and fluorescence emission parameters ]
+*
+CERSIZ  10.                            bunch size Cherenkov photons
+FLSIZE  5.                             bunch size fluorescence photons
+CERFIL  0                              Cherenkov output to extra file
+PAROUT  F  F
+CWAVLG  300.  450.                     Cherenkov wavelength band
+*
+* [ H.E.S.S. telescopes ] (x -> North, y -> West)
+*
+*             X     Y    Z    R         (all in cm)
+TELESCOPE     0 -8485    0  750        Tel. 1
+TELESCOPE  8485     0    0  750        Tel. 2
+TELESCOPE     0  8485    0  750        Tel. 3
+TELESCOPE -8485     0    0  750        Tel. 4
+*
+*CSCAT   10  500e2  0.                  use shower several times
+*
+* [Interaction flags]
+*
+FIXHEI  0.  0                          first interaction height & target
+FIXCHI  0.                             starting altitude (g/cm**2)
+ELMFLG  T   T                          em. interaction flags (NKG,EGS)
+RADNKG  200.E2                         outer radius for NKG lat.dens.determ.
+HADFLG  0  0  0  0  0  0               flags for hadr. interaction
+ECUTS   0.3  0.1  0.020  0.020         energy cuts for particles
+MUADDI  F                              additional info for muons
+MUMULT  T                              muon multiple scattering angle
+LONGI   F  20.  F  F                   longit.distr. & step size & fit
+MAXPRT  0                              max. number of printed events
+ECTMAP  1.E6                           cut on gamma factor for printout
+STEPFC  1.0                            mult. scattering step length fact.
+*
+* [ Debugging and output options ]
+*
+DEBUG   F  6  F  1000000               debug flag and logical unit for output
+*DIRECT  ./                             /dev/null means no normal CORSIKA data
+TELFIL iact_2.dat                        Telescope photon bunch output
+*TELFIL iact.dat:100:100:1              Telescope photon bunch output
+*                                         (eventio format)
+*
+* [ This is the end, my friend ]
+*
+EXIT
