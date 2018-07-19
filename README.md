@@ -9,11 +9,11 @@ observation level. IACT option of CORSIKA has been used to store them.
 
 ## Requirements and installation
 In order to run the notebook with the examples, you will need to have the following packages
-installed (or work in an enviroment):
+installed:
   - matplotlib
   - numpy
-  - **eventio**: [pyeventio](https://github.com/fact-project/pyeventio): install it
-    with `pip install eventio`
+  - **eventio**: [pyeventio](https://github.com/fact-project/pyeventio)(install it
+    with `pip install eventio`)
 
 ### Example (see jupyter notebook)
 
