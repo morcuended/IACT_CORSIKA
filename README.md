@@ -2,9 +2,11 @@
 
   - [IACT/ATMO package](https://www.mpi-hd.mpg.de/hfm/~bernlohr/iact-atmo/) version 1.50 by Konrad Bernlohr.
 
-Here I show an example of photon bunches (red for fluorescence and blue for Cherenov) projected on the ground. IACT option of CORSIKA has been used to store those bunches.
+An example of photon bunches distribution (red for fluorescence and blue for Cherenov) at observation level. IACT option of CORSIKA has been used to store them.
 
 ![](images/iact3d.png)
+
+Top view
 ![](images/vertical.png "Top view")
 
 ### Content:
